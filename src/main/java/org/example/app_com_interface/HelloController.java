@@ -6,8 +6,6 @@ import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 
-import java.awt.image.ImagingOpException;
-
 public class HelloController {
     @FXML
     TextField txtUsuario;
@@ -22,7 +20,18 @@ public class HelloController {
     Label labelLoguin;
 
     @FXML
-    protected void onButtonLoguinClick(){
-        labelLoguin.setText("Login realizado com sucesso!");
+    protected void onButtonLoguinClick() {
+        LoginDAO usuario = new LoginDAO();
+
+        String usuarioDigitado = txtUsuario.getText();
+        String senhaDigitada = txtSenha.getText();
+
+        boolean autenticado = usuario.autenticar(usuarioDigitado, senhaDigitada);
+
+        if (autenticado == true) {
+            labelLoguin.setText("Usuário e senha corretos!");
+        } else {
+            labelLoguin.setText("Usuário ou senha incorretos!");
+        }
     }
 }
