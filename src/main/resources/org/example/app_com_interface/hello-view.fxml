@@ -6,28 +6,79 @@
 <?import javafx.scene.paint.*?>
 <?import javafx.scene.text.*?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.app_com_interface.HelloController">
    <center>
       <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="20.0" BorderPane.alignment="CENTER">
          <children>
-            <TextField promptText="E-MAIL:">
+            <Label prefHeight="70.0" prefWidth="126.0" text="Login">
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.3490196168422699" blue="1.0" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="1.0" blue="0.48235294222831726" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+               <font>
+                  <Font name="Times New Roman Bold" size="48.0" />
+               </font>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </Label>
+            <Label fx:id="labelLoguin" prefHeight="47.0" prefWidth="603.0" textAlignment="CENTER">
+               <font>
+                  <Font name="Times New Roman Italic" size="24.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="30.0" />
+               </VBox.margin>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.3499999940395355" blue="1.0" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="1.0" blue="0.4833333194255829" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+               <padding>
+                  <Insets left="30.0" right="30.0" />
+               </padding>
+            </Label>
+            <TextField fx:id="txtUsuario" promptText="E-MAIL:">
                <VBox.margin>
                   <Insets left="150.0" right="150.0" />
                </VBox.margin>
                <font>
-                  <Font name="Times New Roman" size="12.0" />
+                  <Font name="Times New Roman Italic" size="12.0" />
                </font></TextField>
-            <PasswordField promptText="SENHA:">
+            <PasswordField fx:id="txtSenha" promptText="SENHA:">
                <VBox.margin>
                   <Insets left="150.0" right="150.0" />
                </VBox.margin>
                <font>
-                  <Font name="Times New Roman" size="12.0" />
+                  <Font name="Times New Roman Italic" size="12.0" />
                </font>
             </PasswordField>
             <HBox prefHeight="9.0" prefWidth="600.0">
                <children>
-                  <Button mnemonicParsing="false" text="LOGAR">
+                  <Button fx:id="btnLoguin" mnemonicParsing="false" onAction="#onButtonLoguinClick" text="LOGAR">
                      <textFill>
                         <LinearGradient endX="1.0" endY="1.0">
                            <stops>
@@ -51,7 +102,7 @@
                         <Insets left="150.0" />
                      </HBox.margin>
                   </Button>
-                  <Button contentDisplay="CENTER" layoutX="160.0" layoutY="10.0" mnemonicParsing="false" text="CADASTRAR">
+                  <Button fx:id="btnLoguin" contentDisplay="CENTER" layoutX="160.0" layoutY="10.0" mnemonicParsing="false" onAction="#onButtonLoguinClick" text="CADASTRAR">
                      <textFill>
                         <LinearGradient endX="1.0" endY="1.0">
                            <stops>

@@ -1,14 +1,28 @@
 package org.example.app_com_interface;
 
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.TextField;
+
+import java.awt.image.ImagingOpException;
 
 public class HelloController {
     @FXML
-    private Label welcomeText;
+    TextField txtUsuario;
 
     @FXML
-    protected void onHelloButtonClick() {
-        welcomeText.setText("Welcome to JavaFX Application!");
+    PasswordField txtSenha;
+
+    @FXML
+    Button btnLoguin;
+
+    @FXML
+    Label labelLoguin;
+
+    @FXML
+    protected void onButtonLoguinClick(){
+        labelLoguin.setText("Login realizado com sucesso!");
     }
 }
