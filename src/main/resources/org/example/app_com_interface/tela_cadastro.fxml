@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.app_com_interface.CadastroController">
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" lineSpacing="20.0" prefHeight="54.0" prefWidth="256.0" text="Criar Conta" textAlignment="CENTER">
+               <font>
+                  <Font name="Times New Roman Bold" size="48.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.3490196168422699" blue="1.0" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="1.0" blue="0.48235294222831726" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <VBox.margin>
+                  <Insets left="150.0" right="150.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets top="25.0" />
+               </padding></Label>
+            <TextField promptText="USUÁRIO:">
+               <opaqueInsets>
+                  <Insets left="150.0" right="150.0" />
+               </opaqueInsets>
+               <VBox.margin>
+                  <Insets left="150.0" right="150.0" top="25.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="Times New Roman Italic" size="12.0" />
+               </font></TextField>
+            <TextField layoutX="160.0" layoutY="64.0" promptText="SENHA:">
+               <opaqueInsets>
+                  <Insets left="150.0" right="150.0" />
+               </opaqueInsets>
+               <VBox.margin>
+                  <Insets left="150.0" right="150.0" top="25.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="Times New Roman Italic" size="12.0" />
+               </font>
+            </TextField>
+            <TextField layoutX="160.0" layoutY="89.0" promptText="CONFIRMAR SENHA:">
+               <opaqueInsets>
+                  <Insets left="150.0" right="150.0" />
+               </opaqueInsets>
+               <VBox.margin>
+                  <Insets left="150.0" right="150.0" top="25.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="Times New Roman Italic" size="12.0" />
+               </font>
+            </TextField>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Button mnemonicParsing="false" text="VOLTAR">
+                     <HBox.margin>
+                        <Insets left="150.0" right="140.0" top="25.0" />
+                     </HBox.margin>
+                     <textFill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.3490196168422699" blue="1.0" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="1.0" blue="0.48235294222831726" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                     <font>
+                        <Font name="Times New Roman Bold" size="12.0" />
+                     </font></Button>
+                  <Button layoutX="160.0" layoutY="35.0" mnemonicParsing="false" text="CADASTRAR">
+                     <textFill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.3490196168422699" blue="1.0" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="1.0" blue="0.48235294222831726" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                     <font>
+                        <Font name="Times New Roman Bold" size="12.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets top="25.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </children></VBox>
+   </center>
+</BorderPane>

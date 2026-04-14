@@ -1,0 +1,81 @@
+/* =========================================
+   Fundo da Tela (Root / BorderPane)
+   ========================================= */
+.root {
+    /* Fundo geral escuro, simulando o fundo da imagem */
+    -fx-background-color: #121212;
+    -fx-font-family: 'Segoe UI', Helvetica, Arial, sans-serif;
+}
+
+/* =========================================
+   Cartão Central Roxo (Aplique essa classe no seu VBox)
+   ========================================= */
+.login-card {
+    -fx-background-color: #362242; /* Roxo escuro do fundo do painel */
+    -fx-background-radius: 30px;   /* Bordas bem arredondadas */
+    -fx-padding: 40px;             /* Espaço interno para não colar nas bordas */
+}
+
+/* =========================================
+   Textos (Labels: "Email", "Senha", "Fazer Login")
+   ========================================= */
+.label {
+    -fx-text-fill: #FFFFFF; /* Texto branco */
+    -fx-font-weight: bold;
+}
+
+/* Classe específica para o título "Fazer Login" */
+.titulo {
+    -fx-font-size: 20px;
+}
+
+/* =========================================
+   Campos de Texto (TextField e PasswordField)
+   ========================================= */
+.text-field, .password-field {
+    -fx-background-color: #4a3b52; /* Roxo um pouco mais claro e opaco */
+    -fx-text-fill: #FFFFFF;        /* Texto digitado em branco */
+    -fx-prompt-text-fill: #9a8c9e; /* Cor do texto de dica (placeholder) */
+    -fx-background-radius: 8px;    /* Bordas levemente arredondadas */
+    -fx-padding: 10px 15px;
+    -fx-border-width: 0px;         /* Sem borda para ficar "chapado" */
+}
+
+/* Efeito ao clicar para digitar no campo */
+.text-field:focused, .password-field:focused {
+    -fx-background-color: #574660;
+    -fx-border-color: #FFFFFF;
+    -fx-border-radius: 8px;
+    -fx-border-width: 1px;
+}
+
+/* =========================================
+   Botão de "Entrar"
+   ========================================= */
+.button {
+    -fx-background-color: #FFFFFF; /* Fundo branco */
+    -fx-text-fill: #121212;        /* Texto escuro/preto */
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-background-radius: 20px;   /* Borda em formato de pílula (bem redonda) */
+    -fx-padding: 10px 40px;
+    -fx-cursor: hand;
+}
+
+.button:hover {
+    -fx-background-color: #E0E0E0; /* Efeito hover levemente acinzentado */
+}
+
+/* =========================================
+   Links e Textos Amarelos (Esqueceu a senha / Criar conta)
+   ========================================= */
+.hyperlink {
+    -fx-text-fill: #d4af37; /* Tom de amarelo/dourado da imagem */
+    -fx-underline: false;
+    -fx-font-size: 12px;
+}
+
+.hyperlink:hover {
+    -fx-text-fill: #f5d15f; /* Fica mais claro ao passar o mouse */
+    -fx-underline: true;
+}

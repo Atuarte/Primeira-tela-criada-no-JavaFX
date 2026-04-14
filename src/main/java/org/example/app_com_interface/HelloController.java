@@ -6,6 +6,8 @@ import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 
+import java.io.IOException;
+
 public class HelloController {
     @FXML
     TextField txtUsuario;
@@ -18,6 +20,11 @@ public class HelloController {
 
     @FXML
     Label labelLoguin;
+
+    @FXML
+    protected void irParaTelaCadastro() throws IOException {
+        HelloApplication.trocadorDeTelas("cadastro.fxml");
+    }
 
     @FXML
     protected void onButtonLoguinClick() {

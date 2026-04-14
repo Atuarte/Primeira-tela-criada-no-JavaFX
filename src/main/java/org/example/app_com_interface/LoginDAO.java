@@ -6,14 +6,14 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class LoginDAO {
-    public boolean autenticar(String nomeDigitado, String senhaDigitada) {
-        String sql = "SELECT senha FROM usuarios WHERE nome = ?";
+    public boolean autenticar(String emailDigitado, String senhaDigitada) {
+        String sql = "SELECT senha FROM usuarios WHERE email = ?";
 
         try (
                 Connection conn = DatabaseConfig.getConnection();
                 PreparedStatement stmt = conn.prepareStatement(sql)
         ) {
-            stmt.setString(1, nomeDigitado);
+            stmt.setString(1, emailDigitado);
 
             try (ResultSet rs = stmt.executeQuery()) {
                 if (rs.next()) {

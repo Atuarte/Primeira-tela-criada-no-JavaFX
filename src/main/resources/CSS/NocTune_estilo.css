@@ -1,0 +1,80 @@
+/* =========================================
+   Estilo principal da tela (Root/Fundo)
+   ========================================= */
+.root {
+    /* Um tom de cinza bem escuro, quase preto, comum em dark themes */
+    -fx-background-color: #121212;
+    -fx-font-family: 'Segoe UI', Helvetica, Arial, sans-serif;
+}
+
+/* =========================================
+   Textos e Títulos
+   ========================================= */
+.label {
+    -fx-text-fill: #E0E0E0; /* Branco "suave" para não cansar a vista */
+}
+
+/* Adicione a classe "titulo" ao seu Label principal (NocTune / Sign Up) */
+.titulo {
+    -fx-font-size: 32px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #FFFFFF;
+}
+
+/* =========================================
+   Campos de Texto (TextField e PasswordField)
+   ========================================= */
+.text-field, .password-field {
+    -fx-background-color: #2A2A2A; /* Fundo cinza escuro para o input */
+    -fx-text-fill: #FFFFFF;        /* Texto digitado em branco */
+    -fx-prompt-text-fill: #888888; /* Cor do placeholder (dica do campo) */
+    -fx-background-radius: 8px;    /* Bordas arredondadas */
+    -fx-border-radius: 8px;
+    -fx-border-color: #333333;     /* Borda sutil */
+    -fx-border-width: 1px;
+    -fx-padding: 12px 15px;
+    -fx-font-size: 14px;
+}
+
+/* Efeito ao clicar no campo de texto (Focus) */
+.text-field:focused, .password-field:focused {
+    -fx-border-color: #9D4EDD; /* Cor de destaque (ajuste para a cor exata do NocTune) */
+    -fx-border-width: 2px;
+    -fx-background-color: #303030;
+}
+
+/* =========================================
+   Botão Principal (Sign Up / Login)
+   ========================================= */
+.button {
+    -fx-background-color: #9D4EDD; /* Substitua pela cor exata do botão do NocTune (ex: roxo ou azul) */
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 8px;
+    -fx-padding: 12px 24px;
+    -fx-cursor: hand;
+}
+
+/* Efeito ao passar o mouse sobre o botão (Hover) */
+.button:hover {
+    -fx-background-color: #B273EA; /* Uma versão um pouco mais clara da cor principal */
+}
+
+/* Efeito ao clicar no botão (Pressed) */
+.button:pressed {
+    -fx-background-color: #7B2CBF; /* Uma versão um pouco mais escura */
+}
+
+/* =========================================
+   Links (Ex: "Log In" no rodapé)
+   ========================================= */
+.hyperlink {
+    -fx-text-fill: #9D4EDD; /* Mesma cor do botão para manter o padrão */
+    -fx-underline: false;
+}
+
+.hyperlink:hover {
+    -fx-text-fill: #B273EA;
+    -fx-underline: true;
+}
