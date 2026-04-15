@@ -23,7 +23,7 @@ public class HelloController {
 
     @FXML
     protected void irParaTelaCadastro() throws IOException {
-        HelloApplication.trocadorDeTelas("cadastro.fxml");
+        HelloApplication.trocadorDeTelas("tela_cadastro.fxml");
     }
 
     @FXML

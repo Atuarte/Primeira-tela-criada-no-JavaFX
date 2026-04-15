@@ -7,6 +7,7 @@ import atlantafx.base.theme.PrimerLight;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.text.Font; // ADICIONADO: Importação necessária para a fonte
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -18,6 +19,10 @@ public class HelloApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         primaryStage = stage;
+
+        // ADICIONADO: Carregamento da fonte customizada
+        // Certifique-se de que o arquivo .ttf está na pasta resources/fonts/
+        Font.loadFont(getClass().getResourceAsStream("/fontes/LakkiReddy-Regular.ttf"), 14);
 
         //Application.setUserAgentStylesheet(new PrimerLight().getUserAgentStylesheet());
         Application.setUserAgentStylesheet(new NordDark().getUserAgentStylesheet());
@@ -41,7 +46,7 @@ public class HelloApplication extends Application {
         );
 
         // Cria a cena com o conteúdo carregado
-        Scene scene = new Scene(loader.load());
+        Scene scene = new Scene(loader.load(),640,480);
 
         // Define a cena no Stage principal
         primaryStage.setScene(scene);

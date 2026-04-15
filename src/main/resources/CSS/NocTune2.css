@@ -2,46 +2,48 @@
    Fundo da Tela (Root / BorderPane)
    ========================================= */
 .root {
-    /* Fundo geral escuro, simulando o fundo da imagem */
     -fx-background-color: #121212;
     -fx-font-family: 'Segoe UI', Helvetica, Arial, sans-serif;
 }
 
 /* =========================================
-   Cartão Central Roxo (Aplique essa classe no seu VBox)
+   Cartão Central Roxo (Aplique ao seu VBox)
    ========================================= */
 .login-card {
-    -fx-background-color: #362242; /* Roxo escuro do fundo do painel */
-    -fx-background-radius: 30px;   /* Bordas bem arredondadas */
-    -fx-padding: 40px;             /* Espaço interno para não colar nas bordas */
+    -fx-background-color: #362242;
+    -fx-background-radius: 30px;
+    -fx-padding: 40px 50px;
+    -fx-alignment: center;         /* Centraliza os itens dentro do VBox */
+    -fx-spacing: 15px;             /* Espaçamento automático entre os campos */
 }
 
 /* =========================================
-   Textos (Labels: "Email", "Senha", "Fazer Login")
+   Títulos e Textos
    ========================================= */
 .label {
-    -fx-text-fill: #FFFFFF; /* Texto branco */
-    -fx-font-weight: bold;
+    -fx-text-fill: #FFFFFF;
 }
 
-/* Classe específica para o título "Fazer Login" */
+/* Aplique no Label "Criar Conta" */
 .titulo {
-    -fx-font-size: 20px;
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-padding: 0 0 15px 0; /* Dá um respiro abaixo do título */
 }
 
 /* =========================================
-   Campos de Texto (TextField e PasswordField)
+   Campos de Texto (Usuário, Senha, Confirmar)
    ========================================= */
 .text-field, .password-field {
-    -fx-background-color: #4a3b52; /* Roxo um pouco mais claro e opaco */
-    -fx-text-fill: #FFFFFF;        /* Texto digitado em branco */
-    -fx-prompt-text-fill: #9a8c9e; /* Cor do texto de dica (placeholder) */
-    -fx-background-radius: 8px;    /* Bordas levemente arredondadas */
-    -fx-padding: 10px 15px;
-    -fx-border-width: 0px;         /* Sem borda para ficar "chapado" */
+    -fx-background-color: #4a3b52;
+    -fx-text-fill: #FFFFFF;
+    -fx-prompt-text-fill: #9a8c9e;
+    -fx-background-radius: 8px;
+    -fx-padding: 12px 15px;
+    -fx-border-width: 0px;
+    -fx-min-width: 250px;          /* Mantém os campos com um bom tamanho */
 }
 
-/* Efeito ao clicar para digitar no campo */
 .text-field:focused, .password-field:focused {
     -fx-background-color: #574660;
     -fx-border-color: #FFFFFF;
@@ -50,32 +52,33 @@
 }
 
 /* =========================================
-   Botão de "Entrar"
+   Botão Principal (CADASTRAR)
    ========================================= */
 .button {
-    -fx-background-color: #FFFFFF; /* Fundo branco */
-    -fx-text-fill: #121212;        /* Texto escuro/preto */
+    -fx-background-color: #FFFFFF;
+    -fx-text-fill: #121212;
     -fx-font-weight: bold;
     -fx-font-size: 14px;
-    -fx-background-radius: 20px;   /* Borda em formato de pílula (bem redonda) */
-    -fx-padding: 10px 40px;
+    -fx-background-radius: 20px;
+    -fx-padding: 10px 30px;
     -fx-cursor: hand;
 }
 
 .button:hover {
-    -fx-background-color: #E0E0E0; /* Efeito hover levemente acinzentado */
+    -fx-background-color: #E0E0E0;
 }
 
 /* =========================================
-   Links e Textos Amarelos (Esqueceu a senha / Criar conta)
+   Botão Secundário (VOLTAR) - Opcional
    ========================================= */
-.hyperlink {
-    -fx-text-fill: #d4af37; /* Tom de amarelo/dourado da imagem */
-    -fx-underline: false;
-    -fx-font-size: 12px;
+.btn-voltar {
+    -fx-background-color: transparent;
+    -fx-text-fill: #FFFFFF;
+    -fx-border-color: #FFFFFF;
+    -fx-border-radius: 20px;
+    -fx-border-width: 1px;
 }
 
-.hyperlink:hover {
-    -fx-text-fill: #f5d15f; /* Fica mais claro ao passar o mouse */
-    -fx-underline: true;
+.btn-voltar:hover {
+    -fx-background-color: rgba(255, 255, 255, 0.1); /* Fundo levemente branco ao passar o mouse */
 }
