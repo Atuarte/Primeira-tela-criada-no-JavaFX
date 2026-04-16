@@ -22,7 +22,8 @@ public class HelloApplication extends Application {
 
         // ADICIONADO: Carregamento da fonte customizada
         // Certifique-se de que o arquivo .ttf está na pasta resources/fonts/
-        Font.loadFont(getClass().getResourceAsStream("/fontes/LakkiReddy-Regular.ttf"), 14);
+        Font.loadFont(getClass().getResourceAsStream("../../ resources/fontes/LakkiReddy-Regular.ttf"), 14);
+        //Font.loadFont(getClass().getResourceAsStream("/fontes/LakkiReddy-Regular.ttf"), 14);
 
         //Application.setUserAgentStylesheet(new PrimerLight().getUserAgentStylesheet());
         Application.setUserAgentStylesheet(new NordDark().getUserAgentStylesheet());

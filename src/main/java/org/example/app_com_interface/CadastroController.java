@@ -26,16 +26,17 @@ public class CadastroController {
     @FXML
     protected void onVoltarClick() throws IOException {
         //ao clicar no botão, volto para a tela de login
-      HelloApplication.trocadorDeTelas("hello-view.fxml");
+        HelloApplication.trocadorDeTelas("hello-view.fxml");
     }
+
     @FXML
-    public void onClicarClick() {
+    public void onCriarContaClick() {
 
         String usuario = campoUsuario.getText();
         String senha = criarSenha.getText();
         String confirmarSenha = campoConfirmarSenha.getText();
 
-        if (usuario.isBlank() || senha.isBlank() || confirmarSenha.isBlank()){
+        if (usuario.isBlank() || senha.isBlank() || confirmarSenha.isBlank()) {
             //Exiba uma janela de aviso para o usuário
             Alert alerta = new Alert(Alert.AlertType.WARNING);
             alerta.setTitle("Campos Obrigatórios");
@@ -47,7 +48,7 @@ public class CadastroController {
         }
 
         //Verificar se a "senha" e "confirmar senha" estão corretas
-        if (!(senha.equals(confirmarSenha))){
+        if (!(senha.equals(confirmarSenha))) {
             Alert alerta = new Alert(Alert.AlertType.WARNING);
             alerta.setTitle("Senhas não conferem");
             alerta.setHeaderText(null);
@@ -55,6 +56,17 @@ public class CadastroController {
             alerta.showAndWait();
 
             return;
-    }
+        }
+
         CadastroDAO dao = new CadastroDAO();
+
+
+        dao.cadastrarUsuario(usuario, senha);
+
+        Alert sucesso = new Alert(Alert.AlertType.INFORMATION);
+        sucesso.setTitle("Cadastro realizado!");
+        sucesso.setHeaderText(null);
+
+
+    }
 }
