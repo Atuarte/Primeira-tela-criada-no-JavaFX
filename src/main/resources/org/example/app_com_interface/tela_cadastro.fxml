@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.net.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.app_com_interface.CadastroController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" stylesheets="@../../../CSS/NocTune2.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.app_com_interface.CadastroController">
 
    <center>
       <VBox alignment="CENTER" maxHeight="400.0" maxWidth="450.0" spacing="15.0" styleClass="login-card" BorderPane.alignment="CENTER">
@@ -15,6 +15,9 @@
                <VBox.margin>
                   <Insets bottom="10.0" />
                </VBox.margin>
+               <font>
+                  <Font name="Lakki Reddy" size="12.0" />
+               </font>
             </Label>
 
             <TextField fx:id="campoUsuario" maxWidth="300.0" promptText="USUÁRIO:" />
@@ -27,7 +30,7 @@
                <children>
                   <Button fx:id="btnVoltar" mnemonicParsing="false" onAction="#onVoltarClick" prefHeight="40.0" prefWidth="140.0" styleClass="btn-voltar" text="VOLTAR" />
 
-                  <Button fx:id="btnCriarConta" mnemonicParsing="false" prefHeight="40.0" prefWidth="174.0" text="CRIAR CONTA" />
+                  <Button fx:id="btnCriarConta" mnemonicParsing="false" onAction="#onCriarContaClick" prefHeight="40.0" prefWidth="174.0" text="CRIAR CONTA" />
                </children>
                <VBox.margin>
                   <Insets top="15.0" />
@@ -41,9 +44,4 @@
          </padding>
       </VBox>
    </center>
-
-   <stylesheets>
-      <URL value="@../../../CSS/NocTune_estilo.css" />
-      <URL value="@../../../CSS/NocTune2.css" />
-   </stylesheets>
 </BorderPane>

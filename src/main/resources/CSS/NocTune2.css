@@ -1,14 +1,22 @@
 /* =========================================
-   Fundo da Tela (Root / BorderPane)
-   ========================================= */
+  Fundo da Tela (Root / BorderPane)
+  ========================================= */
 .root {
     -fx-background-color: #121212;
-    -fx-font-family: 'Segoe UI', Helvetica, Arial, sans-serif;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-family: "Lakki Reddy";
 }
 
+
+/* 1. Register the font file */
+@font-face {
+    src: url("../fontes/LakkiReddy-Regular.ttf");
+}
+
+
 /* =========================================
-   Cartão Central Roxo (Aplique ao seu VBox)
-   ========================================= */
+  Cartão Central Roxo (Aplique ao seu VBox)
+  ========================================= */
 .login-card {
     -fx-background-color: #362242;
     -fx-background-radius: 30px;
@@ -17,12 +25,15 @@
     -fx-spacing: 15px;             /* Espaçamento automático entre os campos */
 }
 
+
 /* =========================================
-   Títulos e Textos
-   ========================================= */
+  Títulos e Textos
+  ========================================= */
 .label {
     -fx-text-fill: #FFFFFF;
+    -fx-font-family: "Lakki Reddy";
 }
+
 
 /* Aplique no Label "Criar Conta" */
 .titulo {
@@ -31,9 +42,10 @@
     -fx-padding: 0 0 15px 0; /* Dá um respiro abaixo do título */
 }
 
+
 /* =========================================
-   Campos de Texto (Usuário, Senha, Confirmar)
-   ========================================= */
+  Campos de Texto (Usuário, Senha, Confirmar)
+  ========================================= */
 .text-field, .password-field {
     -fx-background-color: #4a3b52;
     -fx-text-fill: #FFFFFF;
@@ -44,6 +56,7 @@
     -fx-min-width: 250px;          /* Mantém os campos com um bom tamanho */
 }
 
+
 .text-field:focused, .password-field:focused {
     -fx-background-color: #574660;
     -fx-border-color: #FFFFFF;
@@ -51,9 +64,10 @@
     -fx-border-width: 1px;
 }
 
+
 /* =========================================
-   Botão Principal (CADASTRAR)
-   ========================================= */
+  Botão Principal (CADASTRAR)
+  ========================================= */
 .button {
     -fx-background-color: #FFFFFF;
     -fx-text-fill: #121212;
@@ -64,13 +78,15 @@
     -fx-cursor: hand;
 }
 
+
 .button:hover {
     -fx-background-color: #E0E0E0;
 }
 
+
 /* =========================================
-   Botão Secundário (VOLTAR) - Opcional
-   ========================================= */
+  Botão Secundário (VOLTAR) - Opcional
+  ========================================= */
 .btn-voltar {
     -fx-background-color: transparent;
     -fx-text-fill: #FFFFFF;
@@ -79,6 +95,8 @@
     -fx-border-width: 1px;
 }
 
+
 .btn-voltar:hover {
     -fx-background-color: rgba(255, 255, 255, 0.1); /* Fundo levemente branco ao passar o mouse */
 }
+
